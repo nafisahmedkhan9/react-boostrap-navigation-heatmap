@@ -24,4 +24,4 @@ react-boostrap 1.0.0-beta.10 or greater
 
 ## Output of module
 
-![alt text](https://github.com/nafisahmedkhan9/react-boostrap-navigation-heatmap/tree/master/src/lib/output.png)
+![alt text](src/lib/output.png)
