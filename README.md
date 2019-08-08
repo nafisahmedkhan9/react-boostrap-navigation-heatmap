@@ -20,3 +20,8 @@ react-boostrap 1.0.0-beta.10 or greater
 
 `npm install react-boostrap --save`
 `npm install react-boostrap-navigation-heatmap --save`
+
+
+## Output of module
+
+![alt text](https://github.com/nafisahmedkhan9/react-boostrap-navigation-heatmap/tree/master/src/lib/output.png)
