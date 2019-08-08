@@ -1,13 +1,27 @@
 {
   "name": "react-boostrap-navigation-heatmap",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "(ISC OR GPL-3.0)",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "babel": {
+    "presets": [
+      "@babel/react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nafisahmedkhan9/react-boostrap-navigation-heatmap.git"
+  },
   "dependencies": {
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "publish:npm": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/lib --out-dir dist --copy-files",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -27,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5"
   }
 }
