@@ -8,6 +8,7 @@ npm install react-bootstrap --save
 
 ### Demo App
 
+```javascript
 import React from "react"
 import HeatmapChart from "./lib/index"
 
@@ -65,6 +66,7 @@ class App extends React.Component {
 }
 
 export default App
+```
 
 ### Give Contribution
 
