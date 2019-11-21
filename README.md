@@ -1,27 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Info
 
-## Available Scripts
+This project is made with boostrap to to give better and responsive UI
 
-In the project directory, you can run:
+### Dependencies
 
-### `npm start`
+npm install react-bootstrap --save
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Demo App
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+import React from "react"
+import HeatmapChart from "./lib/index"
 
-## Dependencies
+class App extends React.Component {
 
-react-boostrap 1.0.0-beta.10 or greater
+    getScrapData(){
+        var itemList = [
+            {label: "Red label", category:"Red", otherInfo: {}},
+            {label: "Green label", category:"Green", otherInfo: {}},
+            {label: "Blue label", category:"Blue", otherInfo: {}},
+            {label: "Green label", category:"Green", otherInfo: {}},
+        ]
+        return itemList
+    }
 
-## Installation
+    render() {
+        var dataArray = this.getScrapData()
+        return (
+            <HeatmapChart
+                categoryTooltip={{
+                    title:(label)=>{
+                        return label
+                    },
+                    content: (label)=>{
+                        return label
+                    }}
+                }
+                cellTooltip={{
+                    title:(label)=>{
+                        return label
+                    },
+                    content: (label)=>{
+                        return label
+                    }
+                }}
+                categoryFormatter={(text, data, index)=>{
+                    return text
+                }}
+                cellFormatter={(text, data, index)=>{
+                    return  (
+                        <><label style={{fontSize: "15px", margin:0}}>{text}</label><br/></>
+                    )
+                }}
+                categories={['All', "Red", "Blue", "Green"]}
+                colors={['white', "red", "lightblue", 'lightgreen']}
+                categoryStyle={{marginBottom: "10px"}}
+                cellComponent={dataArray}
+                height="500"
+                cellStyle={{}}
+                cellContainerStyle={{}}
+                mainContainerStyle={{marginLeft: "auto", marginRight: "auto", width: "80%", marginBottom: "20px", padding:"20px"}}  
+            />
+        );
+    }
+}
 
-`npm install react-boostrap --save`
-`npm install react-boostrap-navigation-heatmap --save`
+export default App
 
+### Give Contribution
 
-## Output of module
+Feel free to test and open issue on this project and will make sure your issue will be solved as soon as possible
 
-![alt text](src/lib/output.png)
+### License
+
+#### (ISC OR GPL-3.0)
